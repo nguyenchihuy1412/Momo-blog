@@ -1,0 +1,92 @@
+### REGISTER
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "username": "nchuy1412",
+    "password": "nchuy1412",
+    "email": "nchuy1412@gmail.com"
+}
+
+### LOGIN
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "username": "nchuy12345",
+    "password": "nchuy12345"
+}
+
+### POST CATEGORIES
+POST http://localhost:5000/api/categories/
+Content-Type: application/json
+
+{
+    "name": "Momo-chan"
+}
+
+### GET CATEGORIES
+GET http://localhost:5000/api/categories/
+
+### POST POSTS
+POST http://localhost:5000/api/posts/
+content-type: application/json
+
+{
+    "title": "Run Elsie Jewelria",
+    "photo": "https://static.wikia.nocookie.net/to-loveru/images/4/43/Run_Rito_TLRD_EP4_01.png/revision/latest?cb=20160904154049",
+    "desc": "Run Elsie Jewelria is a childhood friend of Lala and the girl version of Ren Elsie Jewelria. As Run and Ren are royalty from planet Memorze, they can change gender in mind and body upon triggering a specific stimulus; in their case, a sneeze. Ren hates Rito, especially after he accidentally kissed him, but Run fell in love with Rito because of that kiss, which caused Ren to further dislike Rito.",
+    "username": "huync1412"
+}
+
+### PUT POSTS
+PUT http://localhost:5000/api/posts/624ae3cfe98240217447536d
+content-type: application/json
+
+{
+    "title": "Kurosaki Mea",
+    "photo": "https://i.pinimg.com/originals/9a/34/cd/9a34cd0549bde812075a0e846ff8e7df.jpg",
+    "categories": ["females", "deviluke"],
+    "desc": "Mea Kurosaki is a character from To-Love-Ru Darkness. She is sent to Earth to bring back the old Yami. It is revealed that she is Yami's younger sister as she was created by the same organization and from the same project (Project Eve) as her. At first she is found alone staring out the window until she meets Nana and becomes friends with her. She now views others as friends. It appears that she has sexual, though not necessarily emotional, feelings towards Rito, although she tends to use them in a playful, teasing way around him.",
+    "username": "huync1412"
+}
+
+### GET ONE POST
+GET http://localhost:5000/api/posts/62497bd3d80f101f501d9cf4
+content-type: application/json
+
+### DELETE POSTS
+DELETE http://localhost:5000/api/posts/62497bd3d80f101f501d9cf4
+content-type: application/json
+
+{
+    "username": "huync12345"
+}
+
+### GET ALL POST
+GET http://localhost:5000/api/posts/
+
+### GET USER
+GET http://localhost:5000/api/users/62497f124d55a6563068b824
+
+### GET ALL USER
+GET http://localhost:5000/api/users/
+
+### PUT USER
+PUT http://localhost:5000/api/users/62483e18b1ad5844387887d7
+content-type: application/json
+
+{
+    "userId": "62483e18b1ad5844387887d7",
+    "username": "huync",
+    "password": "nchuy3333",
+    "email": "huync3333@gmail.com"
+}
+
+### DELETE USER
+DELETE http://localhost:5000/api/users/62497f124d55a6563068b824
+content-type: application/json
+
+{
+    "userId": "62497f124d55a6563068b824"
+}

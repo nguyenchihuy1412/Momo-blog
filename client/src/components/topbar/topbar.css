@@ -1,0 +1,91 @@
+.top {
+  width: 100%;
+  height: 60px;
+  background-color: cyan;
+  position: sticky;
+  top: 0;
+  padding-top: 5px;
+  display: flex;
+  align-items: center;
+  z-index: 999;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.top li {
+  font-weight: 600;
+}
+
+.top .link:hover {
+  opacity: 0.8;
+}
+
+.topLeft,
+.topRight {
+  flex: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.topLeft a {
+  column-gap: 10px;
+  width: 36px;
+  height: 36px;
+  background-color: #db49ac;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.topLeft a:hover {
+  opacity: 0.5;
+}
+
+.topIcon {
+  font-size: 20px;
+  margin-right: 10px;
+  color: #444;
+  cursor: pointer;
+}
+
+.topCenter {
+  flex: 6;
+}
+
+.topList {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.topListItem {
+  margin-right: 20px;
+  font-size: 18px;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.topListItem:hover {
+  color: gray;
+  opacity: 0.8;
+}
+
+.topImg {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.topSearchIcon:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}

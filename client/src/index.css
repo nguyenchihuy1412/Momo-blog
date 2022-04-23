@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    text-decoration: none;
+    list-style: none;
+}
+
+textarea {
+    resize: none;
+}
+
+i.bx {
+    font-size: 26px;
+    color: purple;
+}
+
+::selection {
+    background-color: cyan
+}
+
+/* Width Scroll */
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+/* Track Scroll*/
+::-webkit-scrollbar-track {
+    background: cyan;
+}
+
+/* Handle Scroll*/
+::-webkit-scrollbar-thumb {
+    background: goldenrod;
+    border-radius: 7px;
+}
+
+html {
+    background-color: #db49ac;
+    overflow-x: hidden;
+}
+
+.link {
+    text-decoration: none;
+    color: inherit;
+}
