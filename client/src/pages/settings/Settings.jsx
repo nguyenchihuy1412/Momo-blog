@@ -15,7 +15,7 @@ export default function Settings() {
   useEffect(() => {
     const getUser = async () => {
       try {
-        const res = await axios.get("/users/" + user.id);
+        const res = await axios.get("https://momo-blog.herokuapp.com/api/users/" + user.id);
         setUsername(res.data.user.username);
         setEmail(res.data.user.email);
       } catch (error) {
@@ -43,14 +43,14 @@ export default function Settings() {
       updatedUser.profilePic = fileName;
 
       try {
-        await axios.post("/upload", data);
+        await axios.post("https://momo-blog.herokuapp.com/api/upload", data);
       } catch (error) {
         console.log("Error to uploaded file");
       }
     }
 
     try {
-      const res = await axios.put("/users/update/" + user.id, updatedUser);
+      const res = await axios.put("https://momo-blog.herokuapp.com/api/users/update/" + user.id, updatedUser);
       dispatch({ type: "UPDATE_SUCCESS", payload: res.data.user });
       alert("User updated successfully, Please login again!!!");
       dispatch({ type: "LOGOUT" });
@@ -73,7 +73,7 @@ export default function Settings() {
       );
       if (confirmDelete) {
         try {
-          await axios.delete(`users/delete/${user.id}`, {
+          await axios.delete(`https://momo-blog.herokuapp.com/api/users/delete/${user.id}`, {
             data: { userId: user.id },
           });
           alert("User deleted successfully!!!");

@@ -11,7 +11,7 @@ export default function Register() {
   const handleRegister = async () => {
     setError(false);
     try {
-      const res = await axios.post("/auth/register", {
+      const res = await axios.post("https://momo-blog.herokuapp.com/api/auth/register", {
         username,
         password,
         email,

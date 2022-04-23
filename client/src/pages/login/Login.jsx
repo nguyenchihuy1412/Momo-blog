@@ -11,7 +11,7 @@ export default function Login() {
   const handleLogin = async () => {
     dispatch({ type: "LOGIN_START" });
     try {
-      const res = await axios.post("/auth/login", {
+      const res = await axios.post("https://momo-blog.herokuapp.com/api/auth/login", {
         username: userRef.current.value.toLowerCase(),
         password: passwordRef.current.value,
       });

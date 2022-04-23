@@ -9,7 +9,7 @@ export default function Sidebar() {
   useEffect(() => {
     const fetchCat = async () => {
       try {
-        const res = await axios.get("/categories");
+        const res = await axios.get("https://momo-blog.herokuapp.com/api/categories");
         setCat(res.data.cats);
       } catch (error) {
         console.log("Error fetching categories");

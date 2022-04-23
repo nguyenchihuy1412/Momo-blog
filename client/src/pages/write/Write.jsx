@@ -28,14 +28,14 @@ export default function Write() {
       console.log(newPost);
 
       try {
-        await axios.post("/upload", data);
+        await axios.post("https://momo-blog.herokuapp.com/api/upload", data);
       } catch (error) {
         console.log("Internal server error");
       }
     }
 
     try {
-      const res = await axios.post("/posts", newPost);
+      const res = await axios.post("https://momo-blog.herokuapp.com/api/posts", newPost);
       window.location.replace("/post/" + res.data.post._id);
       alert(res.data.message);
     } catch (error) {

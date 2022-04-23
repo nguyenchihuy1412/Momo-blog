@@ -16,7 +16,7 @@ export default function SinglePost() {
   useEffect(() => {
     const getPost = async () => {
       try {
-        const res = await axios.get(`/posts/${pathId}`);
+        const res = await axios.get(`https://momo-blog.herokuapp.com/api/posts/${pathId}`);
         setPost(res.data.post);
         setTitle(res.data.post.title);
         setDesc(res.data.post.desc);
@@ -37,7 +37,7 @@ export default function SinglePost() {
     );
     if (confirmDelete) {
       try {
-        await axios.delete(`/posts/${pathId}`, {
+        await axios.delete(`https://momo-blog.herokuapp.com/api/posts/${pathId}`, {
           data: { username: user.username },
         });
         window.location.replace("/posts");
@@ -52,7 +52,7 @@ export default function SinglePost() {
 
   const handleUpdate = async () => {
     try {
-      await axios.put(`/posts/${pathId}`, {
+      await axios.put(`https://momo-blog.herokuapp.com/api/posts/${pathId}`, {
         username: user.username,
         title,
         desc,

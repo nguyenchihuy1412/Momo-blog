@@ -11,7 +11,7 @@ export default function Posts() {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const res = await axios.get("/posts" + search.toLowerCase());
+        const res = await axios.get("https://momo-blog.herokuapp.com/api/posts" + search.toLowerCase());
         setPosts(res.data.posts);
       } catch (error) {
         console.log("Error fetching posts");
